@@ -1,16 +1,6 @@
-a = list(map(int, input().split()))
-b = list(set(a))
+n = int(input())
 
-if len(b) == 1:
-  print(10000+b[0]*1000)
-
-elif len(b) == 2:
-  for i in b:
-    if a.count(i) == 2:
-      print(1000+i*100)
-    else:
-      continue
-
-
-elif len(b) == 3:
-  print(max(b)*100)
+if n%4 != 0:
+  print("다시 입력하시오")
+else:
+  print("long "*(n//4)+"int")
