@@ -1,6 +1,11 @@
-n = int(input())
+import sys
 
-if n%4 != 0:
-  print("다시 입력하시오")
-else:
-  print("long "*(n//4)+"int")
+T = int(sys.stdin.readline())
+result = [] * T
+
+for i in range(T):
+  a, b = map(int, sys.stdin.readline().split())
+  result.append(a+b)
+
+for i in range(T):
+  print(result[i])
