@@ -1,9 +1,10 @@
 n = int(input())
 sum = []
+num = []
 
 for i in range(n):
-  a, b = map(int, input().split())
-  sum.append(a+b)
+  num.append(list(map(int, input().split())))
+  sum.append(num[i][0] + num[i][1])
 
 for t in range(n):
-  print(f"Case #{t+1}: {sum[t]}")
+  print(f"Case #{t+1}: {num[t][0]} + {num[t][1]} = {sum[t]}")
