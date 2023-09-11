@@ -1,4 +1,3 @@
-n = int(input())
-
-for i in range(n):
-  print("*" * (i+1))
+while True:
+  a, b = (map(int, input().split()))
+  print(a+b)
