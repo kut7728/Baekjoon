@@ -1,11 +1,9 @@
-import sys
+n = int(input())
+sum = []
 
-T = int(sys.stdin.readline())
-result = [] * T
+for i in range(n):
+  a, b = map(int, input().split())
+  sum.append(a+b)
 
-for i in range(T):
-  a, b = map(int, sys.stdin.readline().split())
-  result.append(a+b)
-
-for i in range(T):
-  print(result[i])
+for t in range(n):
+  print(f"Case #{t+1}: {sum[t]}")
