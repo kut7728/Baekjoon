@@ -1,6 +1,5 @@
-while True:
-  try:
-    a, b = (map(int, input().split()))
-    print(a+b)
-  except:
-    break
+n = int(input())
+
+lst = list(map(int, input().split()))
+
+print(min(lst), max(lst))
