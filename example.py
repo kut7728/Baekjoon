@@ -1,5 +1,7 @@
-n = int(input())
+lst = []
 
-lst = list(map(int, input().split()))
+for i in range(9):
+  lst.append(int(input()))
 
-print(min(lst), max(lst))
+print(max(lst))
+print(lst.index(max(lst))+1)
