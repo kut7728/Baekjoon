@@ -1,7 +1,13 @@
-lst = []
+n, m = map(int, input().split())
+bask = [0]*n
 
-for i in range(9):
-  lst.append(int(input()))
+for i in range(m):
+  a, b, c = map(int, input().split())
+  for t in range(a, b+1):
+    bask[t-1] = c
+    
+      
+  
 
-print(max(lst))
-print(lst.index(max(lst))+1)
+for i in range(n):
+  print(bask[i],  end=" ")
