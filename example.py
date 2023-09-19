@@ -1,10 +1,7 @@
-stud = ['False'] * 30
+left = []
 
-for i in range(28):
-  num = int(input())
-  stud[num-1] = 'True'
+for _ in range(10):
+  left.append(int(input())%42)
 
-target = list(filter(lambda x: stud[x] == 'False', range(30)))
-
-print(min(target)+1)
-print(max(target)+1)
+leftset = list(set(left))
+print(len(leftset))
