@@ -1,11 +1,8 @@
-n, m = map(int, input().split())
-bask = list(range(1,n+1))
+n = int(input())
+num = str(input())
+result = 0
 
-for _ in range(m):
-  i, j = map(int, input().split())
-  temp = bask[i-1:j]
-  temp.reverse()
-  bask[i-1:j] = temp
+for _ in range(n):
+  result += int(num[_])
 
-for q in bask:
-  print(q, end=" ")
+print(result)
