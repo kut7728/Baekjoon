@@ -1,7 +1,11 @@
-left = []
+n, m = map(int, input().split())
+bask = list(range(1,n+1))
 
-for _ in range(10):
-  left.append(int(input())%42)
+for _ in range(m):
+  i, j = map(int, input().split())
+  temp = bask[i-1:j]
+  temp.reverse()
+  bask[i-1:j] = temp
 
-leftset = list(set(left))
-print(len(leftset))
+for q in bask:
+  print(q, end=" ")
