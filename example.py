@@ -1,8 +1,12 @@
-n = int(input())
-num = str(input())
-result = 0
+T = int(input())
+a=[]
 
-for _ in range(n):
-  result += int(num[_])
+for _ in range(T):
+  R, S = input().split()
+  b = str()
+  for i in range(len(S)):
+    b += S[i]*int(R)
+  a.append(b)
 
-print(result)
+for t in range(T):
+  print(a[t])
