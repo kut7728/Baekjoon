@@ -1,12 +1,14 @@
-T = int(input())
-a=[]
+phone = [['a', 'b', 'c'],['d', 'e', 'f'],['g', 'h', 'i'],['j', 'k', 'l'],['m', 'n', 'o'],['p', 'q', 'r', 's'],['t', 'u', 'v'],['w', 'x', 'y', 'z']]
 
-for _ in range(T):
-  R, S = input().split()
-  b = str()
-  for i in range(len(S)):
-    b += S[i]*int(R)
-  a.append(b)
+get = input().lower()
+time = 0
 
-for t in range(T):
-  print(a[t])
+for i in get:
+  for j in range(8):
+      try:
+        phone[j].index(i)
+        time += (j+3)
+      except:
+         continue
+         
+print(time)
