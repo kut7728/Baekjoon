@@ -1,5 +1,5 @@
 word = input()
-word.upper()
+word = word.upper()
 count = {}
 
 for i in word:
@@ -8,4 +8,11 @@ for i in word:
   except:
     count[i] = 1
 
-max(count.values())
+temp = [k for k, v in count.items() if v == max(count.values())]
+
+if len(temp) == 1:
+  output = temp[0]
+else:
+  output = '?'
+
+print(output)
